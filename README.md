@@ -24,11 +24,10 @@ The goal is to help learners practice breaking down complex ideas simply, findin
 
 ## Technologies
 
-- Python
-- Natural language processing with HuggingFace Transformers/Large Language Model like OpenAI and Llama2
+- Natural language processing with HuggingFace Transformers/LLM like OpenAI and Llama2
 - React frontend
-- Flask backend
-- PostgreSQL database
+- [FastAPI](https://fastapi.tiangolo.com/) backend
+- PostgreSQL/ActiveLoop/Pinecone database (Optional)
 
 ## Contributors
 
