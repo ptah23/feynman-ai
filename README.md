@@ -25,7 +25,9 @@ The goal is to help learners practice breaking down complex ideas simply, findin
 ## Technologies
 
 - Natural language processing with HuggingFace Transformers/LLM like OpenAI and Llama2
-- React frontend
+- Front end candidates:
+  - React like this https://vercel.com/templates/next.js/chatbot-ui
+  - Gradio like this https://www.gradio.app/docs/chatinterface
 - [FastAPI](https://fastapi.tiangolo.com/) backend
 - PostgreSQL/ActiveLoop/Pinecone database (Optional)
 
