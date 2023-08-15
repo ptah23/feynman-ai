@@ -1,5 +1,3 @@
-Here is a draft README.md for that concept:
-
 # Feynman-AI
 
 This is a tool to help learners practice explaining concepts using the Feynman learning technique along with AI assessment.
