@@ -1,10 +1,10 @@
 # Feynman-AI
 
-This is a tool to help learners practice explaining concepts using the Feynman learning technique along with AI assessment.
+This is a tool to help learners practice explaining concepts using the Feynman learning technique by leveraging AI assessment.
 
 ## Description
 
-Feynman-AI allows users to input a concept from a textbook and then type out an explanation of the concept in their own words. The explanation is run through an AI engine which analyzes the text and provides feedback:
+Feynman-AI allows users to input a concept from a textbook or other source and then type out an explanation of the concept in their own words. The explanation is run through an AI engine which analyzes the text and provides feedback:
 
 - Assesses coverage of the core aspects of the concept
 - Checks for clarity and simplicity of the explanation
