@@ -35,4 +35,4 @@ This project was created by [Peter Gelderbloem](https://github.com/ptah23) as pa
 
 ## License
 
-This project is open source and available under the [TBC].
+This project is open source and available under the [TBC] license.
