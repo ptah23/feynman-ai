@@ -4,6 +4,8 @@
 
 LLMs are flexible general use NLP models and can be used to validate whether an application idea can be achieved with modern NLP techniques, specifically Transformers.
 As an example I chose a description of the concept of Gradient Descent, a cornerstone algorithm of Machine Learning and asked Claude.ai to provide a fake student in-your-own-words response.
+
+## Experiments
 ### Example 1
 Claude ai is prompted to provide a student in-your-own-words response and this is tehn fed into ChatGPT to do the assessment
 #### Claude.ai Prompt
@@ -209,7 +211,8 @@ the description could be even more comprehensive.
 Remember that explaining complex concepts accurately and understandably is a skill that can always be refined. The student's
 analogy is a great starting point, and building upon it with the additional technical details would further enhance the clarity
 and completeness of the explanation.
+```
 
 ## Conclusion
-Language models seem to be capable of performingthis task. It is noticeable that ChatGPT used more than the concept provided in its evaluation and used its pre-learned concept of Gradient Descent instead. This can be mitigated with some prompt engineering but I think the basic idea of using a Language Model to help assessment of understanding while using the Feynman Leraning Technique
+Language models seem to be capable of performingthis task. It is noticeable that ChatGPT used more than the concept provided in its evaluation and used its pre-learned concept of Gradient Descent instead. This can be mitigated with some prompt engineering but I think the basic idea of using a Language Model to help assessment of understanding while using the Feynman Learning Technique
 ```
