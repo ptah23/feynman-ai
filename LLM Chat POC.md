@@ -96,8 +96,8 @@ learning rate, which determines the size of the steps taken in each iteration.
 
 4. **Score on Explanation:** Considering the provided criteria and the evaluation of the student's description, I would give
  the student's explanation a score of 8.5 out of 10. The description is clear, covers the main aspects of gradient descent, and
-provides a solid understanding of the iterative optimization process. Addressing the minor gaps mentioned above would enhance the
- completeness of the explanation.
+provides a solid understanding of the iterative optimization process. Addressing the minor gaps mentioned above would enhance
+the completeness of the explanation.
 
 Overall, the student has done a commendable job explaining the concept of gradient descent in simple and understandable terms.
 With a few minor additions, the explanation could become even more comprehensive and provide a well-rounded understanding of
