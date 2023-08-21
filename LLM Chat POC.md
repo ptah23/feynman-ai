@@ -70,7 +70,7 @@ So in summary, gradient descent iteratively fine-tunes the model parameters by c
  minimize the cost and maximize model accuracy.`
 Evaluation:
 ```
-### ChatGPT Reponse
+#### ChatGPT Reponse
 ```
 Let's evaluate the student's description of the concept of gradient descent based on the provided criteria:
 
@@ -173,7 +173,7 @@ this to "walk down" the cost function valley until it reaches the bottom or mini
 each step towards the optimal low point just like walking downhill guides you to the valley floor.`
 Evaluation:
 ```
-### ChatGPT Response
+#### ChatGPT Response
 ```
 The student's description provides a vivid analogy to explain the concept of gradient descent, comparing it to walking
 downhill in a valley to find the lowest point. Let's evaluate the student's description based on the provided criteria:
