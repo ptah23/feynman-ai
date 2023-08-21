@@ -220,4 +220,3 @@ technical details would further enhance the clarity and completeness of the expl
 
 ## Conclusion
 Language models seem to be capable of performingthis task. It is noticeable that ChatGPT used more than the concept provided in its evaluation and used its pre-learned concept of Gradient Descent instead. This can be mitigated with some prompt engineering but I think the basic idea of using a Language Model to help assessment of understanding while using the Feynman Learning Technique
-```
