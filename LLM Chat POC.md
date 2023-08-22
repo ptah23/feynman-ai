@@ -45,7 +45,9 @@ description by the following criteria:
 - coverage of the core aspects of the concept
 - clarity and simplicity of the explanation
 - Identify gaps in understanding and areas that need improvement
-Provides a score on how well the concept was explained.
+
+Provide a score on how well the concept was explained.
+
 Concept: `Gradient Descent is an iterative optimization process that searches for an objective function’s
  optimum value (Minimum/Maximum). It is one of the most used methods for changing a model’s parameters in
  order to reduce a cost function in machine learning projects.  
@@ -147,7 +149,8 @@ description by the following criteria:
 - coverage of the core aspects of the concept
 - clarity and simplicity of the explanation
 - Identify gaps in understanding and areas that need improvement
-Provides a score on how well the concept was explained.
+
+Provide a score on how well the concept was explained.
 
 Concept:
 `Gradient Descent is an iterative optimization process that searches for an objective function’s
