@@ -7,7 +7,7 @@ import { TextareaAutosize } from '@mui/base/TextareaAutosize';
 import MainForm from "@/components/home/mainform";
 import { ErrorBoundary } from "react-error-boundary";
 
-function fallbackRender({ error, resetErrorBoundary }) {
+function fallbackRender({ error: any, resetErrorBoundary }) {
     // Call resetErrorBoundary() to reset the error boundary and retry the render.
 
     return (
