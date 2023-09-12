@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "prisma generate && next dev",
+    "fastapi-dev": "pip3 install -r requirements.txt --user && python -m uvicorn app.api.index:app --reload",
+    "next-dev": "prisma generate && next dev",
+    "dev": "concurrently \"npm run next-dev\" \"npm run fastapi-dev\"",
     "build": "prisma generate && prisma db push && next build",
     "format:write": "prettier --write \"**/*.{css,js,json,jsx,ts,tsx}\"",
     "format": "prettier \"**/*.{css,js,json,jsx,ts,tsx}\"",
@@ -21,6 +23,7 @@
     "@types/react-dom": "18.0.10",
     "@vercel/analytics": "^0.1.6",
     "@vercel/og": "^0.0.26",
+    "axios": "^1.5.0",
     "classnames": "^2.3.2",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
