@@ -32,6 +32,7 @@ export default function NavBar({ session }: { session: Session | null }) {
             ></Image>
             <p>Feynman AI</p>
           </Link>
+            {/*}
           <div>
             {session ? (
               <UserDropdown session={session} />
@@ -42,8 +43,10 @@ export default function NavBar({ session }: { session: Session | null }) {
               >
                 Sign In
               </button>
-            )}
+            )
           </div>
+          }
+            */}
         </div>
       </div>
     </>

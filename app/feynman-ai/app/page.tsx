@@ -1,11 +1,10 @@
 import Card from "@/components/home/card";
 import Balancer from "react-wrap-balancer";
-import { DEPLOY_URL } from "@/lib/constants";
-import { Github, Twitter } from "@/components/shared/icons";
-import WebVitals from "@/components/home/web-vitals";
-import ComponentGrid from "@/components/home/component-grid";
-import Image from "next/image";
-import { nFormatter } from "@/lib/utils";
+
+import { Github } from "@/components/shared/icons";
+import { TextareaAutosize } from '@mui/base/TextareaAutosize';
+import MainForm from "@/components/home/mainform";
+
 
 export default async function Home() {
 
@@ -30,31 +29,19 @@ export default async function Home() {
           className="mx-auto mt-6 flex animate-fade-up items-center justify-center space-x-5 opacity-0"
           style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
         >
+ <a
+            className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
+            href="https://github.com/ptah23/feynman-ai"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Github />
 
+          </a>
         </div>
       </div>
-      <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-4 xl:px-0">
 
-          <Card
-            key={"concept"}
-            title={"concept"}
-            description={"put the concept you want to understand here"}
-            large={false}
-          />
-          <Card
-            key={"yourWords"}
-            title={"in your own words"}
-            description={"put in-your-own words explanation here"}
-            large={false}
-          />
-          <Card
-            key={"evaluation"}
-            title={"Evaluation"}
-            description={"AI evaluation of your understanding"}
-            large={true}
-          />
-
-      </div>
+        <MainForm/>
     </>
   );
 }
