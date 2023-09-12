@@ -4,12 +4,12 @@ import Balancer from "react-wrap-balancer";
 import { Github } from "@/components/shared/icons";
 import { TextareaAutosize } from '@mui/base/TextareaAutosize';
 import MainForm from "@/components/home/mainform";
-
+import ErrorBoundary from "@/components/shared/errorboundary";
 
 export default async function Home() {
 
   return (
-    <>
+    <ErrorBoundary>
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
         <h1
           className="animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm md:text-7xl md:leading-[5rem]"
@@ -42,6 +42,6 @@ export default async function Home() {
       </div>
 
         <MainForm/>
-    </>
+    </ErrorBoundary>
   );
 }
