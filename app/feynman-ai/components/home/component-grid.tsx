@@ -15,7 +15,7 @@ export default function ComponentGrid() {
       >
         <p className="text-gray-600">Modal</p>
       </button>
-        
+
     </div>
   );
 }
