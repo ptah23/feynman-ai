@@ -7,13 +7,17 @@ import { TextareaAutosize } from '@mui/base/TextareaAutosize';
 import MainForm from "@/components/home/mainform";
 import { ErrorBoundary } from "react-error-boundary";
 
-function fallbackRender({ error: any, resetErrorBoundary }) {
+export type FallbackProps = {
+    error: any;
+    resetErrorBoundary: (...args: any[]) => void;
+};
+function fallbackRender(props: FallbackProps) {
     // Call resetErrorBoundary() to reset the error boundary and retry the render.
 
     return (
         <div role="alert">
             <p>Something went wrong:</p>
-            <pre style={{ color: "red" }}>{error.message}</pre>
+            <pre style={{ color: "red" }}>{props.error.message}</pre>
         </div>
     );
 }
