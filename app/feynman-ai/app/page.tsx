@@ -1,15 +1,29 @@
+"use client";
 import Card from "@/components/home/card";
 import Balancer from "react-wrap-balancer";
 
 import { Github } from "@/components/shared/icons";
 import { TextareaAutosize } from '@mui/base/TextareaAutosize';
 import MainForm from "@/components/home/mainform";
-import ErrorBoundary from "@/components/shared/errorboundary";
+import { ErrorBoundary } from "react-error-boundary";
+
+function fallbackRender({ error, resetErrorBoundary }) {
+    // Call resetErrorBoundary() to reset the error boundary and retry the render.
+
+    return (
+        <div role="alert">
+            <p>Something went wrong:</p>
+            <pre style={{ color: "red" }}>{error.message}</pre>
+        </div>
+    );
+}
 
 export default async function Home() {
 
   return (
-    <ErrorBoundary>
+    <ErrorBoundary fallbackRender={fallbackRender}  onReset={(details) => {
+        // Reset the state of your app so the error doesn't happen again
+    }}>
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
         <h1
           className="animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm md:text-7xl md:leading-[5rem]"
