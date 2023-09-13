@@ -18,8 +18,8 @@ def hello():
 @app.post("/api/evaluate")
 def evaluate(request:EvaluationRequest):
     prompt =  '''
-        Read the following concept and a student's in-your-own-words description and evaluate the student's
-        description by the following criteria: 
+        Read the following concept prefixed with `Concept` and a student's in-your-own-words explanation prefixed with `Student` and evaluate the student's
+        explanation by the following criteria: 
         - coverage of the core aspects of the concept
         - clarity and simplicity of the explanation
         - Identify gaps in understanding and areas that need improvement
@@ -29,6 +29,7 @@ def evaluate(request:EvaluationRequest):
         Concept: `{concept}`
         
         Student: `{explanation}`
+        
         Evaluation:'''.format(concept=request.concept, explanation=request.explanation)
     request = {
         "max_tokens": 2000,
