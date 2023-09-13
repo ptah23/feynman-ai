@@ -24,7 +24,7 @@ def evaluate(request:EvaluationRequest):
         - clarity and simplicity of the explanation
         - Identify gaps in understanding and areas that need improvement
         
-        Provide a score on how well the concept was explained.
+        Provide a score out of 10 on how well the concept was explained.
         
         Concept: `{concept}`
         
