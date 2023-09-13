@@ -5,19 +5,27 @@ import { useState } from "react";
 import Card from "@/components/home/card";
 import { TextareaAutosize } from '@mui/base/TextareaAutosize';
 import Button from '@mui/material/Button';
+import {CircularProgress} from "@mui/material";
 const MainForm = () => {
 
     const [concept, setConcept] = useState("");
     const [explanation, setExplanation] = useState("");
     const [evaluation, setEvaluation] = useState("");
+    const [showSpinner, setShowSpinner] = useState(false);
     const submit = () => {
+        setEvaluation("");
+        setShowSpinner(true);
         axios
             .post('/api/evaluate',
                 {concept, explanation})
             .then((res) => {
                 setEvaluation(res.data);
+                setShowSpinner(false);
+            }).catch((error) => {
+                setShowSpinner(false);
+                setEvaluation(error.message);
             });
-    };
+        };
     return (
         <div className="my-8 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-4 px-5 md:grid-cols-4 xl:px-0">
 
@@ -58,8 +66,8 @@ const MainForm = () => {
                 description={"AI evaluation of your understanding"}
                 large={true}
             ><div className="flex-col h-fit justify-items-center">
-
-                <div>{evaluation}</div>
+                {showSpinner ? (<CircularProgress /> ) :
+                    (<div>{evaluation}</div>)}
             </div>
             </Card>
 
