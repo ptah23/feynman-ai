@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import requests
 import os
+from requests.structures import CaseInsensitiveDict
 
 class EvaluationRequest(BaseModel):
     concept: str
@@ -30,17 +31,17 @@ def evaluate(request:EvaluationRequest):
         Student: `{explanation}`
         Evaluation:'''.format(concept=request.concept, explanation=request.explanation)
     request = {
-        "max_tokens": "2000",
+        "max_tokens": 2000,
         "truncate": "END",
         "return_likelihoods": "NONE",
         "prompt": prompt
     }
-    headers={
-        "accept": "application/json",
-        "authorization": "Bearer "+os.environ.get("COHERE_API_KEY"),
-        "content-type": "application/json"
-    }
-
+    api_key = os.environ.get("COHERE_API_KEY");
+    headers= CaseInsensitiveDict()
+    headers["accept"] = "application/json"
+    headers["authorization"] = "Bearer "+ api_key
+    headers["content-type"] = "application/json"
 
     response = requests.post("https://api.cohere.ai/v1/generate", json=request, headers=headers)
-    return response
+    print(response.json()["generations"][0]["text"])
+    return response.json()["generations"][0]["text"]

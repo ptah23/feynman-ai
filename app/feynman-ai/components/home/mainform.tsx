@@ -19,7 +19,7 @@ const MainForm = () => {
             });
     };
     return (
-        <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-4 xl:px-0">
+        <div className="my-8 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-4 px-5 md:grid-cols-4 xl:px-0">
 
             <Card
                 key={"concept"}
@@ -46,13 +46,19 @@ const MainForm = () => {
                 value={explanation}
                 onChange={e => setExplanation(e.target.value)}
             /></Card>
+            <div
+                className="mx-auto md:col-span-4 mt-0 flex animate-fade-up items-center justify-center space-x-5 opacity-0"
+                style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
+            >
+                <Button variant="outlined" size="large" disabled={concept === "" || explanation === ""} onClick={e => submit()}>Evaluate</Button>
+            </div>
             <Card
                 key={"evaluation"}
                 title={"Evaluation"}
                 description={"AI evaluation of your understanding"}
                 large={true}
-            ><div className="flex-col justify-items-center">
-                <div><Button variant="outlined" size="large" disabled={concept === "" || explanation === ""} onClick={e => submit()}>Evaluate</Button></div>
+            ><div className="flex-col h-fit justify-items-center">
+
                 <div>{evaluation}</div>
             </div>
             </Card>
