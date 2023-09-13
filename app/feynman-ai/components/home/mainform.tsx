@@ -58,7 +58,7 @@ const MainForm = () => {
                 className="mx-auto md:col-span-4 mt-0 flex animate-fade-up items-center justify-center space-x-5 opacity-0"
                 style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
             >
-                <Button variant="outlined" size="large" disabled={concept === "" || explanation === ""} onClick={e => submit()}>Evaluate</Button>
+                <Button variant="outlined" size="large" disabled={concept === "" || explanation === "" || showSpinner} onClick={e => submit()}>Evaluate</Button>
             </div>
             <Card
                 key={"evaluation"}
