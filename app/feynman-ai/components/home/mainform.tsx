@@ -5,7 +5,7 @@ import { useState } from "react";
 import Card from "@/components/home/card";
 import { TextareaAutosize } from '@mui/base/TextareaAutosize';
 import Button from '@mui/material/Button';
-import {CircularProgress} from "@mui/material";
+import CircularProgress from '@mui/material/CircularProgress';
 const MainForm = () => {
 
     const [concept, setConcept] = useState("");
