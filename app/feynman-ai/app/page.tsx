@@ -43,7 +43,7 @@ export default async function Home() {
             Check your understanding of important concepts
           </Balancer>
         </p>
-        <divm
+        <div
           className="mx-auto mt-2 flex animate-fade-up items-center justify-center space-x-5 opacity-0"
           style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
         >
@@ -56,7 +56,7 @@ export default async function Home() {
             <Github />
 
           </a>
-        </divm>
+        </div>
       </div>
 
         <MainForm/>
