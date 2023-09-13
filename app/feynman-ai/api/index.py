@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-import cohere
+import requests
 import os
 
 class EvaluationRequest(BaseModel):
@@ -29,8 +29,18 @@ def evaluate(request:EvaluationRequest):
         
         Student: `{explanation}`
         Evaluation:'''.format(concept=request.concept, explanation=request.explanation)
-    co = cohere.Client(os.environ.get('COHERE_API_KEY'))
-    response = co.generate(
-        prompt=prompt,
-)
+    request = {
+        "max_tokens": "2000",
+        "truncate": "END",
+        "return_likelihoods": "NONE",
+        "prompt": prompt
+    }
+    headers={
+        "accept": "application/json",
+        "authorization": "Bearer "+os.environ.get("COHERE_API_KEY"),
+        "content-type": "application/json"
+    }
+
+
+    response = requests.post("https://api.cohere.ai/v1/generate", json=request, headers=headers)
     return response
