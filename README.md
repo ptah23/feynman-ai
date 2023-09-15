@@ -36,4 +36,4 @@ This project was created by [Peter Gelderbloem](https://github.com/ptah23) as pa
 
 ## License
 
-This project is open source and available under the [Apache 2.0](License.md) license.
+This project is open source and available under the [Apache 2.0](https://github.com/ptah23/feynman-ai/License.md) license.
